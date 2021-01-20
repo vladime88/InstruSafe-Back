@@ -1,6 +1,6 @@
 const { contract, accounts } = require('@openzeppelin/test-environment');
-const { BN, expectRevert } = require('@openzeppelin/test-helpers');
-const { web3 } = require('@openzeppelin/test-helpers/src/setup');
+// const { BN } = require('@openzeppelin/test-helpers');
+
 const { expect } = require('chai');
 
 const MyAxe = contract.fromArtifact('MyAxe');
@@ -18,12 +18,8 @@ describe('MyAxe', function () {
     name: 'Alice',
     tel: '01020304',
   };
-  const USER2 = {
-    name: 'Bob',
-    tel: '54321',
-  };
 
-  const [owner, dev, user1, user2] = accounts;
+  const [owner, dev, user1] = accounts;
 
   beforeEach(async function () {
     this.myaxe = await MyAxe.new(owner, { from: dev });
@@ -36,7 +32,7 @@ describe('MyAxe', function () {
     expect(await this.myaxe.symbol()).to.equal(SYMBOL);
   });
 
-  it('add and get Member data', async function () {
+  /* it('add and get Member data', async function () {
     await this.app.createMember(USER1.name, USER1.tel, { from: user1 });
     await this.app.createMember(USER2.name, USER2.tel, { from: user2 });
 
@@ -44,5 +40,21 @@ describe('MyAxe', function () {
     const _Member2 = await this.app.getMember(user2);
     expect(isSameMember(_Member1, USER1)).to.be.true;
     expect(isSameMember(_Member2, USER2)).to.be.true;
+  });
+});
+*/
+
+  it('Member created', async function () {
+    await this.myaxe.createMember(
+      USER1[0],
+      USER1[1],
+
+      {
+        from: user1,
+      },
+    );
+    const UserNew1 = await this.myaxe.getMember({ from: user1 });
+    expect(UserNew1[0]).to.equal(USER1[0]);
+    expect(UserNew1[1]).to.equal(USER1[1]);
   });
 });
