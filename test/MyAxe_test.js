@@ -5,9 +5,10 @@ const { expect } = require('chai');
 
 const MyAxe = contract.fromArtifact('MyAxe');
 
-const isSameMember = (_Member, Member) => {
+/* const isSameMember = (_Member, Member) => {
   return _Member[0] === Member.name && _Member[1] === Member.tel;
 };
+*/
 
 describe('MyAxe', function () {
   this.timeout(0);
@@ -45,14 +46,9 @@ describe('MyAxe', function () {
 */
 
   it('Member created', async function () {
-    await this.myaxe.createMember(
-      USER1[0],
-      USER1[1],
-
-      {
-        from: user1,
-      },
-    );
+    await this.myaxe.createMember(USER1[0], USER1[1], {
+      from: user1,
+    });
     const UserNew1 = await this.myaxe.getMember({ from: user1 });
     expect(UserNew1[0]).to.equal(USER1[0]);
     expect(UserNew1[1]).to.equal(USER1[1]);

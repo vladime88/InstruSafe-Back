@@ -1,25 +1,34 @@
-# Getting Started with Create React App
+# PROJET INSTRUSAFE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Le projet InstruSafe est une DAPP créée à partir de l'ERC721
 
-## Available Scripts
+# Pour commencer
 
-In the project directory, you can run:
+Pour bien débuter ce projet il est important d'avoir des notions avec React, ainsi que des connaissances sur la blockchain Ethereum et la création de DAPP.
 
-### `yarn start`
+# Pré-requis
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* React
+* Node
+* Solidity
+* Chakra
+* Mocha / Chai
+* Truffle
+* yarn / npm
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `yarn test`
+_yarn install_
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `yarn install`
 
-### `yarn build`
+_Chakra ui install_
+
+### `yarn add @chakra-ui/react @emotion/react @emotion/styled framer-motion`
+
+_Openzeppelin contracts_
+
+### `npm install @openzeppelin/contracts`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
