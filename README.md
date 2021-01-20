@@ -126,7 +126,6 @@ Ensuite vous pouvez montrer ce que vous obtenez au final...
 ```zsh
  % yarn start
 ```
-![site](https://media.joomeo.com/small/5fd79f9eac243.jpg)
 
 ## Fabriqué avec
 
@@ -140,7 +139,7 @@ Programmes/logiciels/ressources utilisés pour développer notre projet
 
 **Dernière version stable :** 1.0
 
-Git : [Cliquer pour afficher](https://github.com/finalProjectNoe/project-Noe-Back)
+Git : [Cliquer pour afficher](https://github.com/vladime88/InstruSafe-Back)
 
 ## Auteur
 
