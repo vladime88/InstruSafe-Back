@@ -16,19 +16,19 @@ Pour bien débuter ce projet il est important d'avoir des notions avec React, ai
 * Truffle
 * yarn / npm
 
-## Installation
+# Installation
 
-_yarn install_
+## __yarn install__
 
-### `yarn install`
+##### `yarn install`
 
-_Chakra ui install_
+## __Chakra ui install__
 
-### `yarn add @chakra-ui/react @emotion/react @emotion/styled framer-motion`
+##### `yarn add @chakra-ui/react @emotion/react @emotion/styled framer-motion`
 
-_Openzeppelin contracts_
+## __Openzeppelin contracts__
 
-### `npm install @openzeppelin/contracts`
+ `npm install @openzeppelin/contracts`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
